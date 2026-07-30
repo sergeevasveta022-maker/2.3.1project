@@ -43,4 +43,10 @@ userDao.deleteUser(id);
     public List<User> listUsers() {
         return userDao.listUsers();
     }
+
+    @Override
+    public User findByUsername(String username) {
+        return userDao.findByUsername(username);
+    }
+
 }

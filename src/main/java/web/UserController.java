@@ -8,7 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-@RequestMapping("/users")
+@RequestMapping("/admin")
 public class UserController {
 
     @Autowired
@@ -39,13 +39,13 @@ public class UserController {
         } else {
             userService.updateUser(user);
         }
-        return "redirect:/users";
+        return "redirect:/admin";
     }
 
     @GetMapping("/delete/{id}")
     public String deleteUser(@PathVariable Long id) {
         userService.deleteUser(id);
-        return "redirect:/users";
+        return "redirect:/admin";
     }
     }
 

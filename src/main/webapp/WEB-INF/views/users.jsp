@@ -8,7 +8,7 @@
 <body>
 <h1>Пользователи</h1>
 
-<a href="${pageContext.request.contextPath}/users/new">Добавить пользователя</a>
+<a href="${pageContext.request.contextPath}/admin/new">Добавить пользователя</a>
 
 <table border="1">
     <tr>
@@ -27,8 +27,8 @@
             <td>${user.age}</td>
             <td>${user.nationality}</td>
             <td>
-                <a href="${pageContext.request.contextPath}/users/edit/${user.id}">Изменить</a>
-                <a href="${pageContext.request.contextPath}/users/delete/${user.id}">Удалить</a>
+                <a href="${pageContext.request.contextPath}/admin/edit/${user.id}">Изменить</a>
+                <a href="${pageContext.request.contextPath}/admin/delete/${user.id}">Удалить</a>
             </td>
         </tr>
     </c:forEach>

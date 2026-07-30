@@ -39,4 +39,13 @@ entityManager.remove(readUser(id));
         List<User> query= entityManager.createQuery("from User").getResultList();
         return query;
     }
+
+    @Override
+    public User findByUsername(String username) {
+        List<User> result = entityManager
+                .createQuery("from User where username = :username", User.class)
+                .setParameter("username", username)
+                .getResultList();
+        return result.isEmpty() ? null : result.get(0);
+    }
 }

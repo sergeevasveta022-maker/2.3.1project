@@ -7,7 +7,7 @@
 <body>
 <h1>Данные пользователя</h1>
 
-<form action="${pageContext.request.contextPath}/users/save" method="post">
+<form action="${pageContext.request.contextPath}/admin/save" method="post">
     <input type="hidden" name="id" value="${user.id}">
 
     <label>Имя:</label>
@@ -25,6 +25,6 @@
     <button type="submit">Сохранить</button>
 </form>
 
-<a href="${pageContext.request.contextPath}/users">Отмена</a>
+<a href="${pageContext.request.contextPath}/admin">Отмена</a>
 </body>
 </html>

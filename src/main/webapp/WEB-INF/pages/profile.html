@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Личный кабинет</title>
+</head>
+<body>
+<h1>Здравствуйте, <span th:text="${user.name}"></span>!</h1>
+
+<p>Имя: <span th:text="${user.name}"></span></p>
+<p>Фамилия: <span th:text="${user.lastName}"></span></p>
+<p>Возраст: <span th:text="${user.age}"></span></p>
+<p>Национальность: <span th:text="${user.nationality}"></span></p>
+<div th:insert= "~{fragments/logout :: logoutForm}"></div>
+</body>
+</html>
