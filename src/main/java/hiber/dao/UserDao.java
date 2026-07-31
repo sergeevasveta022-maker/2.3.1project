@@ -1,14 +1,8 @@
 package hiber.dao;
 
 import hiber.model.User;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.List;
-
-public interface UserDao {
-    void createUser(User user);
-    User readUser(Long id);
-    void updateUser(User user);
-    void deleteUser(Long id);
-List<User> listUsers();
-User findByUsername(String username);
+public interface UserDao extends JpaRepository<User, Long> {
+    User findByUsername(String username);
 }
